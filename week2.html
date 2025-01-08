@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="week2.css">
+</head>
+<body>
+  <div class="main-container">
+    <!-- Motivational Header Section -->
+    <div class="header">
+      <h1>Welcome to Your Task Manager</h1>
+      <p class="motto">"The future depends on what you do today." - Mahatma Gandhi</p>
+    </div>
+
+    <div class="app-container">
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <input type="text" id="search" class="task-input" placeholder="Search tasks..." oninput="searchTasks()" />
+      </div>
+
+      <!-- Task Input Form -->
+      <div class="task-form">
+        <input type="text" id="task-title" class="task-input" placeholder="Enter task title" />
+        <textarea id="task-desc" class="task-input" placeholder="Enter task description"></textarea>
+        <input type="date" id="task-date" class="task-input" />
+        <select id="task-priority" class="task-input">
+          <option value="low">Low Priority</option>
+          <option value="medium">Medium Priority</option>
+          <option value="high">High Priority</option>
+        </select>
+        <button onclick="addTask()" class="btn">Add Task</button>
+      </div>
+
+      <!-- Task List -->
+      <div id="task-list" class="task-list">
+        <h2>Your Tasks</h2>
+      </div>
+    </div>
+  </div>
+
+  <script src="week2.js"></script>
+</body>
+</html>
